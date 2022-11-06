@@ -4,34 +4,34 @@ class Sample
     public static boolean isPrime(int n)
     {
         if(n==1)
-             return false;
+        return false;
         for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
             if(n%i==0)
-               return false;
+            return false;
         }
         return true;
-        
     }
+    
     public static void main(String args[])
     {
-        Scanner sc=new Scanner (System.in);
-        int n,x[],i,count=0,sum=0;
+        Scanner sc=new Scanner(System.in);
+        int n,x[],i,sum=0,count=0;
         n=sc.nextInt();
         x=new int[n];
         for(i=0;i<n;i++)
-        {
-            x[i]=sc.nextInt();
-        }
+        x[i]=sc.nextInt();
         for(i=0;i<n;i++)
         {
             if(isPrime(x[i]))
             {
-            count++;
             sum=sum+x[i];
+            count++;
             }
         }
-        float r=(float)sum/count;
-        System.out.format("%.2f",r);
+        
+        float avg=(float)sum/count;
+        System.out.format("%.2f",avg);
+        
     }
 }
