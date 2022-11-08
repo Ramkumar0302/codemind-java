@@ -1,20 +1,19 @@
-import java.util.Scanner;
+import java.util.*;
 class Sample
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,k,x[];
+        int n,x[],i,count=0;
         n=sc.nextInt();
-        k=sc.nextInt();
         x=new int[n];
-        for(int i=0;i<n;i++)
-          x[i]=sc.nextInt();
-        int count=0;
-        for(int i=0;i<n;i++)
+        int k=sc.nextInt();
+        for(i=0;i<n;i++)
+            x[i]=sc.nextInt();
+        for(i=0;i<n;i++)
         {
             if(x[i]%k!=0)
-               count++;
+            count++;
         }
         System.out.println(count);
     }
